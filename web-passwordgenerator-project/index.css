@@ -1,0 +1,176 @@
+body{
+
+    display: flex;
+    background-color: #1C1C1C;
+    justify-content: space-evenly;
+    align-items:center; 
+    margin-top: 110px;
+
+    
+}  
+
+.container{
+    
+    display: flex;
+    
+    background-color:#1F2937;
+    width: 550px;
+    height: 550px;
+    align-items: center;
+    justify-content: space-evenly;
+    vertical-align: middle;
+    border-radius: 6px;
+    border: solid #4ADF86 3px ;
+
+    
+    
+}
+.content-container{
+    display: grid;
+    gap: 20px;
+    padding: 0px 0px 60px 0px;
+    
+    
+   
+}
+
+p{
+    font-family:  Arial ,'Karla';
+    font-size: 40px;
+    
+    color:white;
+    font-style:normal;
+    font-weight:bold;
+    margin-bottom: 10px;
+    
+    
+    
+
+
+                                                
+}
+.title{
+    color:#4ADF86;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.discription{
+    font-style: normal;
+
+    color:#D5D4D8;
+    
+    font-size: 20px;
+    font-weight: normal;
+    
+    
+}
+button{
+    font-family: 'Inter', sans-serif;
+    color:white;
+    width: 191px;
+    height: 42px;
+    background-color:#10B981 ;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    padding: 9px 17px 9px 15px ;
+
+
+}
+
+.input-container{
+    display: inline-flex;
+    gap:20px;
+    
+
+    
+}
+
+.input-box{
+    display: flex;
+    width: 211px;
+    height: 39px;
+    border-radius: 6px;
+    background-color: #273549;
+    justify-content: space-around;
+    vertical-align: middle;
+    align-items: center;
+    margin-top: 20px;
+    
+    
+    
+    
+}
+input{
+    background-color: #273549;
+    border:0px solid;
+    color: #55F991;
+    width: 135px;
+    height: 20px;
+    max-lines: "15";
+    font-size: 16px;
+    margin: 0;
+    
+    
+
+}
+
+
+.copy-btn{
+    
+    position:absolute;
+    background-color:#10B981;
+    text-align: center;
+    margin: 1px 1px 1px 1px;
+    padding: 1px 1px 1px 1px;
+    height: 25px;
+    width: 50px;
+    margin-top: -72px;
+    margin-left:160px ;
+    border: #10B981 solid 2px;
+}
+
+.copy-btn:hover{
+    background-color:#10B981;
+    
+   
+    
+    opacity: 0.9;
+    transition: 0.3s;
+    
+}
+.copy-btn:active{
+    
+    
+    position:absolute;
+    font-weight: bold;
+    background-color:#10B981;
+    text-align: center;
+    padding: 1px 1px 1px 1px;
+    margin: 1px 1px 1px 1px;
+    width: 48px;
+    height: 23px;
+    margin-top: -70px;
+    margin-left:160px ;
+    border: none;
+}
+
+
+
+
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+hr{
+    
+    
+    
+    width: 446px;
+    
+    border: solid #2F3E53 1px ;
+   
+
+    
+}
