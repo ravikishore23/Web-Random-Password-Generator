@@ -16,10 +16,10 @@ A clean and simple password generator web app that gives you **two strong random
 
 
 ### Main Interface
-![Screenshot 1](assets/screenshort(1).png)
+![Screenshot 1](web-passwordgenerator-project/assets/Screenshot%20(1).png)
 
 ### After Passwords are Generated
-![Screenshot 2](assets/screenshort(2).png)
+![Screenshot 2](web-passwordgenerator-project/assets/Screenshot%20(2).png)
 
 
 ---
@@ -36,4 +36,4 @@ A clean and simple password generator web app that gives you **two strong random
 
 1. **Clone or Download** this repo:
    ```bash
-   git clone https://github.com//random-password-generator.git
+   git clone https://github.com/ravikishore23/random-password-generator.git
