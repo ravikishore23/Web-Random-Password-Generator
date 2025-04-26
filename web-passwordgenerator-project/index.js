@@ -13,29 +13,64 @@ function passWordGeneratorOne(){
     let passWordOne=""
     for (let i=0 ; i<15 ; i++){
         let randomNumGenOne=Math.floor(Math.random()*characters.length)
-        let randNumOne=characters[randomNumGenOne]
-        // condition paswd shouldn't start with - according to IBM
-        while(randNumOne == '-'){
-            randNumOne = characters[Math.floor(Math.random()*characters.length)]
+        let randCharOne=characters[randomNumGenOne]
+        let count = 0
+        let index = passWordOne.indexOf(randCharOne)
+
+        // condition paswd shouldn't start with -, _, . according to IBM
+        while(randCharOne == '-' || randCharOne == '.' || randCharOne == '_'){
+            randCharOne = characters[Math.floor(Math.random()*characters.length)]
         }
-        passWordOne+=(randNumOne)
+
+        // making sure character would repeat more than 2 times
+        while(index != -1){
+            count++
+            index = passWordOne.indexOf(randCharOne, index + 1)
+            if(count > 1){
+                while(true){
+                    let tempChar = characters[Math.floor(Math.random()*characters.length)]
+                    if(randCharOne != tempChar){
+                        randCharOne = tempChar
+                        break
+                    }
+                }
+                break
+            }
+        }
+        passWordOne+=(randCharOne)
     }
     return passWordOne
 }
 
-//illy
 function passWordGeneratorTwo(){
     let passWordTwo=""
     for (let i=0 ; i<15 ; i++){
         let randomNumGenTwo=Math.floor(Math.random()*characters.length)
-        let randNumTwo=characters[randomNumGenTwo]
-        // condition paswd shouldn't start with - according to IBM
-        while(randNumTwo == '-'){
-            randNumTwo = characters[Math.floor(Math.random()*characters.length)]
+        let randCharTwo=characters[randomNumGenTwo]
+        let count = 0
+        let index = passWordTwo.indexOf(randCharTwo)
+        // condition paswd shouldn't start with -, _, . according to IBM
+        while(randCharTwo == '-' || randCharTwo == '.' || randCharTwo == '_'){
+            randCharTwo = characters[Math.floor(Math.random()*characters.length)]
         }
-        passWordTwo+=(randNumTwo)
+        // making sure character would repeat more than 2 times
+        while(index != -1){
+            count++
+            index = passWordTwo.indexOf(randCharTwo, index + 1)
+            if(count > 1){
+                while(true){
+                    let tempChar = characters[Math.floor(Math.random()*characters.length)]
+                    if(randCharTwo != tempChar){
+                        randCharTwo = tempChar
+                        break
+                    }
+                }
+                break
+            }
+        }
+        passWordTwo+=(randCharTwo)
     }
-    return passWordTwo
+    return passWordTwo 
 }
 
 //log the gen pass when click the generate btn
