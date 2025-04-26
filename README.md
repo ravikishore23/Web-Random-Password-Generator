@@ -1,4 +1,4 @@
-# 🌟 Random Password Generator
+# 🌟 Random Password Generator Original authur Kishore Kumar
 
 A clean and simple password generator web app that gives you **two strong random passwords** instantly! Built using **HTML, CSS, and JavaScript** — no backend, no hassle.
 
