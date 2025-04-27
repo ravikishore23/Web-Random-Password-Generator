@@ -1,11 +1,16 @@
 :root {
+    display: flex;
     background-color:#1F2937;
     margin: 4rem;
     font-family:  Arial ,'Karla';
+    justify-content: center;
+
+
 }
 
 .container {
-    border: solid  #00ff55 2px;
+    border: none;
+    
     border-radius: 3px;
     display: flex;
     width: 600px;
@@ -13,7 +18,10 @@
     align-items: center;
     justify-self: center;
     justify-content: space-evenly;
-    box-shadow: 0 0 10px #55F991, 0 0 20px #55F991, 0 0 30px #55F991;
+
+   
+   
+   
 
 }
 
@@ -23,14 +31,16 @@
 }
 
 p {
-    font-size: 40px;
+    font-size: 3em;
     color:white;
     font-style:normal;
     font-weight:bold;
-    margin-bottom: 10px;                                                
+    margin-bottom: 10px;         
+    
 }
 
 #title {
+    
     color:#4ADF86;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -48,13 +58,13 @@ button{
     color:white;
     width: 191px;
     height: 42px;
-    background-color:#55F991 ;
+    background-color:#4ADF86 ;
     font-size: 16px;
     
     border: none;
     border-radius: 6px;
     padding: 9px 17px 9px 15px ;
-    box-shadow: 0 0 5px #00ff55;
+    
 }
 
 .input-container{
@@ -103,7 +113,7 @@ input{
 }
 
 .copy-btn:hover{
-    background-color:#3dffbe;
+    background-color:#00ff55;
     opacity: 0.9;
     transition: 0.3s;
     
@@ -111,7 +121,7 @@ input{
 .copy-btn:active{
     position:absolute;
     font-weight: bold;
-    background-color:#2dffe7;
+    background-color:#4ADF86;
     text-align: center;
     padding: 1px 1px 1px 1px;
     margin: 1px 1px 1px 1px;
@@ -258,56 +268,61 @@ dialog{
 }
 
 .checkbox-container {
-    display: inline-block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 16px;
-    user-select: none;
-  }
-  
-  .custom-checkbox {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-  
-  .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    transform: rotate(45deg);
-  }
-  
-  .custom-checkbox:checked ~ .checkmark {
-    background-color: #55F991;
-    box-shadow: 0 3px 7px rgba(33, 150, 243, 0.3);
-  }
-  
-  .custom-checkbox:checked ~ .checkmark:after {
-    display: block;
-  }
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
+}
+
+.custom-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: transparent; /* Make it transparent initially */
+  border: 2px solid #ccc; /* Add a soft gray border */
+  border-radius: 4px;
+  transition: background-color 0.3s, border-color 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* lighter shadow */
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* When checkbox is checked */
+.custom-checkbox:checked ~ .checkmark {
+  background-color: #55F991; /* Glowy green */
+  border-color: #55F991; /* Match the green */
+  box-shadow: 0 3px 7px rgba(85, 249, 145, 0.6); /* greenish glow */
+}
+
+/* Show the tick mark after checked */
+.custom-checkbox:checked ~ .checkmark:after {
+  display: block;
+}
+
   
   @keyframes checkAnim {
     0% {

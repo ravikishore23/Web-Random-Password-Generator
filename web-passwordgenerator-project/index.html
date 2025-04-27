@@ -10,12 +10,8 @@
 
   <body>
     <dialog id="dialog">
-      <form>
-        <div
-          class="form-content"
-          name="tweaks"
-          onsubmit="return ValidatePasswordLength()"
-        >
+      <form name="tweaks" onsubmit="return ValidatePasswordLength()">
+        <div class="form-content">
           <p>Made a Tweak to your password parameters</p>
           <hr />
           <div class="tweaks-content">
@@ -43,14 +39,9 @@
               />
             </span>
             <span>
-              <label class="checkbox-container" , for="avoidsym">
+              <label class="checkbox-container" for="avoidsym">
                 Avoid symbol
-                <input
-                  class="custom-checkbox"
-                  checked=""
-                  type="checkbox"
-                  id="avoidsym"
-                />
+                <input class="custom-checkbox" type="checkbox" id="avoidsym" />
                 <span class="checkmark"></span>
               </label>
             </span>
