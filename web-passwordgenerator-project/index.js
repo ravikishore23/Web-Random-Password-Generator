@@ -81,11 +81,13 @@ function paswrdGenBtn(){
 
 copyButtonOne.addEventListener('click', function(){
     navigator.clipboard.writeText(outputOne.value)
+    toast()
 })
 
 copyButtonTwo.addEventListener('click',function() {
     navigator.clipboard.writeText(outputTwo.value)
     console.log(outputTwo.value)
+    toast()
 })
 
 // caller function to change title color on set interval
