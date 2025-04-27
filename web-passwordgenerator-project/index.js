@@ -47,7 +47,7 @@ copyButtonOne.addEventListener('click', function(){
 })
 
 copyButtonTwo.addEventListener( 'click ' ,function() {
-    copyButtonTwo.navigator.writeText(outputTwo.value)
+    navigator.clipboard.writeText(outputTwo.value)
 
 })
 
