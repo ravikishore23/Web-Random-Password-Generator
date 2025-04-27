@@ -1,18 +1,28 @@
 // Random character SET
 const characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~\\";
-let copyButtonOne=document.getElementById("copy-btn-1")
-let copyButtonTwo=document.getElementById("copy-btn-2")
 
+// copy button
+const copyButtonOne=document.getElementById("copy-btn-1")
+const copyButtonTwo=document.getElementById("copy-btn-2")
+
+// tweak popup
+const tweaks = document.getElementById("tweaks-el")
+const dialog = document.getElementById("dialog")
 
 // assin  op 1 to 1st space  // op2 to 2nd space
-let outputOne=document.getElementById("output-1")
-let outputTwo=document.getElementById("output-2")
+const outputOne=document.getElementById("output-1")
+const outputTwo=document.getElementById("output-2")
 
-//this function generate a random num range of 15 characters
+// tweaks  vars
+let passwordlength = 15
+let avoidchar = ""
+let avoidsym = false
+
+//this function generate a random num range of "passwordlength" value characters
 //for 1st password
 function passWordGeneratorOne(){
     let passWordOne=""
-    for (let i=0 ; i<15 ; i++){
+    for (let i=0 ; i<passwordlength ; i++){
         let randomNumGenOne=Math.floor(Math.random()*characters.length)
         let randCharOne=characters[randomNumGenOne]
         let count = 0
@@ -43,9 +53,10 @@ function passWordGeneratorOne(){
     return passWordOne
 }
 
+//for 2st password
 function passWordGeneratorTwo(){
     let passWordTwo=""
-    for (let i=0 ; i<15 ; i++){
+    for (let i=0 ; i<passwordlength ; i++){
         let randomNumGenTwo=Math.floor(Math.random()*characters.length)
         let randCharTwo=characters[randomNumGenTwo]
         let count = 0
@@ -80,14 +91,15 @@ function paswrdGenBtn(){
     outputTwo.value=passWordGeneratorTwo()
 }
 
+// copy paswrd 1 to clipboard
 copyButtonOne.addEventListener('click', function(){
     navigator.clipboard.writeText(outputOne.value)
     toast()
 })
 
+// copy paswrd 2 to clipboard
 copyButtonTwo.addEventListener('click',function() {
     navigator.clipboard.writeText(outputTwo.value)
-    console.log(outputTwo.value)
     toast()
 })
 
@@ -97,22 +109,30 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(changingTitleColor, 1000);
  });
 
- // Function to change title color RGB
+// Function to change title color RGB
  function changingTitleColor(){
     let title = document.getElementById("title")
     title.style.color = "#"+Math.floor(Math.random()*16777215).toString(16) // generate hex code for colors
  }
 
+ // function to display little toast when copied
  function toast() {
     var x = document.getElementById("toast");
     x.className = "show";
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
 
-const tweaks = document.getElementById("tweaks-el")
-const dialog = document.getElementById("dialog")
-
+// toggle pop up
 tweaks.addEventListener( 'click' , (event)=>{
         dialog.showModal();
-        text.textContent = '';
 })
+
+// on save get values
+const form = document.querySelector('form');
+form.addEventListener('submit', function(event) {
+    passwordlength = document.getElementById("passwordlen").value
+    avoidchar = document.getElementById("avoidchar").value
+    avoidsym = document.getElementById("avoidsym").checked
+})
+
+
