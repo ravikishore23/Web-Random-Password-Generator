@@ -1,6 +1,7 @@
 :root {
     background-color:#1F2937;
     margin: 4rem;
+    font-family:  Arial ,'Karla';
 }
 
 .container {
@@ -18,7 +19,6 @@
 }
 
 p {
-    font-family:  Arial ,'Karla';
     font-size: 40px;
     color:white;
     font-style:normal;
