@@ -1,5 +1,5 @@
 // Random character SET
-const characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~\\";
+const characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~\\";
 const symbols = "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~\\"
 
 // copy button
