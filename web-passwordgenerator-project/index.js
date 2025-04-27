@@ -3,6 +3,7 @@ const characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!\"#$%&'
 let copyButtonOne=document.getElementById("copy-btn-1")
 let copyButtonTwo=document.getElementById("copy-btn-2")
 
+
 // assin  op 1 to 1st space  // op2 to 2nd space
 let outputOne=document.getElementById("output-1")
 let outputTwo=document.getElementById("output-2")
@@ -107,3 +108,5 @@ document.addEventListener('DOMContentLoaded', function() {
     x.className = "show";
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
+
+
