@@ -1,45 +1,54 @@
 <!DOCTYPE html>
 <html lang="eng">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Random password generator</title>
-    <link rel="stylesheet" href="index.css" />
-    <link href="https://fonts.cdnfonts.com/css/karla" rel="stylesheet" />
-    <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="content-container">
-        <div class="title-container">
-          <p>Generate a</p>
-          <p id="title">randomm password</p>
-          <p class="discription">Never use an insecure password again.</p>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Random password generator</title>
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.cdnfonts.com/css/karla" rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet" />
+</head>
+
+<body>
+  <dialog id="dialog">
+    <form>
+      <button type="submit" aria-label="close" formmethod="dialog" formnovalidate>X</button>
+      <p style="color: black;">Text on pop up</p>
+    </form>
+  </dialog>
+  <div class="container">
+    <div class="content-container">
+      <div class="title-container">
+        <p>Generate a</p>
+        <p id="title">randomm password</p>
+        <p class="discription">Never use an insecure password again.</p>
+      </div>
+      <div class="middle-container">
+        <button onclick="paswrdGenBtn() ">Generate passwords</button>
+
+        <button id="tweaks-el">Tweaks</button>
+      </div>
+
+      <hr />
+      <div class="input-container">
+        <div class="input-box">
+          <button class="copy-btn" id="copy-btn-1" title="copy button">
+            copy
+          </button>
+          <input class="txt-box" id="output-1" type="text" maxlength="15" />
         </div>
-        <div class="middle-container">
-          <button onclick="paswrdGenBtn() ">Generate passwords</button>
 
-          <button id="tweaks-el">Tweaks</button>
-        </div>
-
-        <hr />
-        <div class="input-container">
-          <div class="input-box">
-            <button class="copy-btn" id="copy-btn-1" title="copy button">
-              copy
-            </button>
-            <input class="txt-box" id="output-1" type="text" maxlength="15" />
-          </div>
-
-          <div class="input-box">
-            <button class="copy-btn" id="copy-btn-2" title="copy button">
-              copy
-            </button>
-            <input class="txt-box" id="output-2" type="text" maxlength="15" />
-          </div>
+        <div class="input-box">
+          <button class="copy-btn" id="copy-btn-2" title="copy button">
+            copy
+          </button>
+          <input class="txt-box" id="output-2" type="text" maxlength="15" />
         </div>
       </div>
     </div>
-    <div id="toast">Copied to clipbroad</div>
-    <script src="index.js"></script>
-  </body>
+  </div>
+  <div id="toast">Copied to clipbroad</div>
+  <script src="index.js"></script>
+</body>
+
 </html>

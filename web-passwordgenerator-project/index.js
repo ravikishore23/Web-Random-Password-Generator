@@ -109,4 +109,10 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
 
+const tweaks = document.getElementById("tweaks-el")
+const dialog = document.getElementById("dialog")
 
+tweaks.addEventListener( 'click' , (event)=>{
+        dialog.showModal();
+        text.textContent = '';
+})
