@@ -80,7 +80,7 @@ copyButtonTwo.addEventListener('click', function () {
     navigator.clipboard.writeText(outputTwo.value)
     toast()
 })
-
+/*
 // caller function to change title color on set interval
 document.addEventListener('DOMContentLoaded', function () {
     changingTitleColor()
@@ -92,7 +92,7 @@ function changingTitleColor() {
     let title = document.getElementById("title")
     title.style.color = "#" + Math.floor(Math.random() * 16777215).toString(16) // generate hex code for colors
 }
-
+*/
 // function to display little toast when copied
 function toast() {
     var x = document.getElementById("toast");
