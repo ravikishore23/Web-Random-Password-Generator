@@ -1,8 +1,8 @@
-//Random character sets
-const characters =["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
-"/"];
+// Random character SET
+const characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~\\";
 let copyButtonOne=document.getElementById("copy-btn-1")
 let copyButtonTwo=document.getElementById("copy-btn-2")
+
 // assin  op 1 to 1st space  // op2 to 2nd space
 let outputOne=document.getElementById("output-1")
 let outputTwo=document.getElementById("output-2")
@@ -12,44 +12,90 @@ let outputTwo=document.getElementById("output-2")
 function passWordGeneratorOne(){
     let passWordOne=""
     for (let i=0 ; i<15 ; i++){
-    let randomNumGenOne=Math.floor(Math.random()*characters.length)
-    let randNumOne=characters[randomNumGenOne]
-    passWordOne+=(randNumOne)
-}
-return passWordOne
-}
+        let randomNumGenOne=Math.floor(Math.random()*characters.length)
+        let randCharOne=characters[randomNumGenOne]
+        let count = 0
+        let index = passWordOne.indexOf(randCharOne)
 
-//illy
+        // condition paswd shouldn't start with -, _, . according to IBM
+        while(randCharOne == '-' || randCharOne == '.' || randCharOne == '_'){
+            randCharOne = characters[Math.floor(Math.random()*characters.length)]
+        }
+
+        // making sure character would repeat more than 2 times
+        while(index != -1){
+            count++
+            index = passWordOne.indexOf(randCharOne, index + 1)
+            if(count > 1){
+                while(true){
+                    let tempChar = characters[Math.floor(Math.random()*characters.length)]
+                    if(randCharOne != tempChar){
+                        randCharOne = tempChar
+                        break
+                    }
+                }
+                break
+            }
+        }
+        passWordOne+=(randCharOne)
+    }
+    return passWordOne
+}
 
 function passWordGeneratorTwo(){
     let passWordTwo=""
     for (let i=0 ; i<15 ; i++){
-    let randomNumGenTwo=Math.floor(Math.random()*characters.length)
-    let randNumTwo=characters[randomNumGenTwo]
-    passWordTwo+=(randNumTwo)
+        let randomNumGenTwo=Math.floor(Math.random()*characters.length)
+        let randCharTwo=characters[randomNumGenTwo]
+        let count = 0
+        let index = passWordTwo.indexOf(randCharTwo)
+        // condition paswd shouldn't start with -, _, . according to IBM
+        while(randCharTwo == '-' || randCharTwo == '.' || randCharTwo == '_'){
+            randCharTwo = characters[Math.floor(Math.random()*characters.length)]
+        }
+        // making sure character would repeat more than 2 times
+        while(index != -1){
+            count++
+            index = passWordTwo.indexOf(randCharTwo, index + 1)
+            if(count > 1){
+                while(true){
+                    let tempChar = characters[Math.floor(Math.random()*characters.length)]
+                    if(randCharTwo != tempChar){
+                        randCharTwo = tempChar
+                        break
+                    }
+                }
+                break
+            }
+        }
+        passWordTwo+=(randCharTwo)
+    }
+    return passWordTwo 
 }
-return passWordTwo
 
-}
 //log the gen pass when click the generate btn
 function paswrdGenBtn(){
-    
     outputOne.value=passWordGeneratorOne()
     outputTwo.value=passWordGeneratorTwo()
 }
 
-
 copyButtonOne.addEventListener('click', function(){
     navigator.clipboard.writeText(outputOne.value)
-
-
-    
 })
 
-copyButtonTwo.addEventListener( 'click ' ,function() {
-    copyButtonTwo.navigator.writeText(outputTwo.value)
-
+copyButtonTwo.addEventListener('click',function() {
+    navigator.clipboard.writeText(outputTwo.value)
+    console.log(outputTwo.value)
 })
 
+// caller function to change title color on set interval
+document.addEventListener('DOMContentLoaded', function() {
+    changingTitleColor()
+    setInterval(changingTitleColor, 1000);
+ });
 
-
+ // Function to change title color RGB
+ function changingTitleColor(){
+    let title = document.getElementById("title")
+    title.style.color = "#"+Math.floor(Math.random()*16777215).toString(16) // generate hex code for colors
+ }

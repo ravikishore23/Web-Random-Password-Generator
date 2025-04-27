@@ -1,69 +1,44 @@
-body{
-
-    display: flex;
-    background-color: #1C1C1C;
-    justify-content: space-evenly;
-    align-items:center; 
-    margin-top: 110px;
-
-    
-}  
-
-.container{
-    
-    display: flex;
-    
+:root {
     background-color:#1F2937;
-    width: 550px;
-    height: 550px;
-    align-items: center;
-    justify-content: space-evenly;
-    vertical-align: middle;
-    border-radius: 6px;
-    border: solid #4ADF86 3px ;
-
-    
-    
+    margin: 4rem;
 }
-.content-container{
+
+.container {
+    display: flex;
+    width: 600px;
+    height: 600px;
+    align-items: center;
+    justify-self: center;
+    justify-content: space-evenly;
+}
+
+.content-container {
     display: grid;
     gap: 20px;
-    padding: 0px 0px 60px 0px;
-    
-    
-   
 }
 
-p{
+p {
     font-family:  Arial ,'Karla';
     font-size: 40px;
-    
     color:white;
     font-style:normal;
     font-weight:bold;
-    margin-bottom: 10px;
-    
-    
-    
-
-
-                                                
+    margin-bottom: 10px;                                                
 }
-.title{
+
+#title {
     color:#4ADF86;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.discription{
-    font-style: normal;
 
+.discription {
+    font-style: normal;
     color:#D5D4D8;
-    
     font-size: 20px;
     font-weight: normal;
-    
-    
 }
+
 button{
     font-family: 'Inter', sans-serif;
     color:white;
@@ -74,16 +49,11 @@ button{
     border: none;
     border-radius: 6px;
     padding: 9px 17px 9px 15px ;
-
-
 }
 
 .input-container{
     display: inline-flex;
-    gap:20px;
-    
-
-    
+    gap:20px;    
 }
 
 .input-box{
@@ -96,10 +66,6 @@ button{
     vertical-align: middle;
     align-items: center;
     margin-top: 20px;
-    
-    
-    
-    
 }
 input{
     background-color: #273549;
@@ -110,14 +76,10 @@ input{
     max-lines: "15";
     font-size: 16px;
     margin: 0;
-    
-    
-
 }
 
 
 .copy-btn{
-    
     position:absolute;
     background-color:#10B981;
     text-align: center;
@@ -132,16 +94,11 @@ input{
 
 .copy-btn:hover{
     background-color:#10B981;
-    
-   
-    
     opacity: 0.9;
     transition: 0.3s;
     
 }
 .copy-btn:active{
-    
-    
     position:absolute;
     font-weight: bold;
     background-color:#10B981;
@@ -156,21 +113,11 @@ input{
 }
 
 
-
-
-
 textarea:focus, input:focus{
     outline: none;
 }
 
 hr{
-    
-    
-    
     width: 446px;
-    
     border: solid #2F3E53 1px ;
-   
-
-    
 }
