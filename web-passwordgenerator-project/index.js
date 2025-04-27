@@ -96,14 +96,14 @@ document.addEventListener('DOMContentLoaded', function() {
  });
 
  // Function to change title color RGB
- function changingTitleColor(){
+function changingTitleColor(){
     let title = document.getElementById("title")
     title.style.color = "#"+Math.floor(Math.random()*16777215).toString(16) // generate hex code for colors
- }
+}
 
  // Toast function
- function toast() {
+function toast() {
     var x = document.getElementById("toast");
     x.className = "show";
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-  }
+}
