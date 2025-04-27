@@ -81,11 +81,12 @@ function paswrdGenBtn(){
 
 copyButtonOne.addEventListener('click', function(){
     navigator.clipboard.writeText(outputOne.value)
+    toast()
 })
 
 copyButtonTwo.addEventListener('click',function() {
     navigator.clipboard.writeText(outputTwo.value)
-    console.log(outputTwo.value)
+    toast()
 })
 
 // caller function to change title color on set interval
@@ -99,3 +100,10 @@ document.addEventListener('DOMContentLoaded', function() {
     let title = document.getElementById("title")
     title.style.color = "#"+Math.floor(Math.random()*16777215).toString(16) // generate hex code for colors
  }
+
+ // Toast function
+ function toast() {
+    var x = document.getElementById("toast");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  }
