@@ -83,10 +83,19 @@ copyButtonOne.addEventListener('click', function(){
     navigator.clipboard.writeText(outputOne.value)
 })
 
-copyButtonTwo.addEventListener( 'click ' ,function() {
-    copyButtonTwo.navigator.writeText(outputTwo.value)
-
+copyButtonTwo.addEventListener('click',function() {
+    navigator.clipboard.writeText(outputTwo.value)
+    console.log(outputTwo.value)
 })
 
+// caller function to change title color on set interval
+document.addEventListener('DOMContentLoaded', function() {
+    changingTitleColor()
+    setInterval(changingTitleColor, 1000);
+ });
 
-
+ // Function to change title color RGB
+ function changingTitleColor(){
+    let title = document.getElementById("title")
+    title.style.color = "#"+Math.floor(Math.random()*16777215).toString(16) // generate hex code for colors
+ }
