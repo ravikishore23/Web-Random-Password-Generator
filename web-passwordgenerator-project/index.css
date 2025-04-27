@@ -5,12 +5,16 @@
 }
 
 .container {
+    border: solid  #00ff55 2px;
+    border-radius: 3px;
     display: flex;
     width: 600px;
     height: 600px;
     align-items: center;
     justify-self: center;
     justify-content: space-evenly;
+    box-shadow: 0 0 10px #55F991, 0 0 20px #55F991, 0 0 30px #55F991;
+
 }
 
 .content-container {
@@ -44,11 +48,13 @@ button{
     color:white;
     width: 191px;
     height: 42px;
-    background-color:#10B981 ;
+    background-color:#55F991 ;
     font-size: 16px;
+    
     border: none;
     border-radius: 6px;
     padding: 9px 17px 9px 15px ;
+    box-shadow: 0 0 5px #00ff55;
 }
 
 .input-container{
@@ -71,6 +77,9 @@ input{
     background-color: #273549;
     border:0px solid;
     color: #55F991;
+    font-family: "Inter";
+    font-weight: bold;
+    
     width: 135px;
     height: 20px;
     max-lines: "15";
@@ -81,7 +90,8 @@ input{
 
 .copy-btn{
     position:absolute;
-    background-color:#10B981;
+   
+    background-color:#55F991 ;
     text-align: center;
     margin: 1px 1px 1px 1px;
     padding: 1px 1px 1px 1px;
@@ -89,11 +99,11 @@ input{
     width: 50px;
     margin-top: -72px;
     margin-left:160px ;
-    border: #10B981 solid 2px;
+    border: #00ff55 solid 2px;
 }
 
 .copy-btn:hover{
-    background-color:#10B981;
+    background-color:#3dffbe;
     opacity: 0.9;
     transition: 0.3s;
     
@@ -101,7 +111,7 @@ input{
 .copy-btn:active{
     position:absolute;
     font-weight: bold;
-    background-color:#10B981;
+    background-color:#2dffe7;
     text-align: center;
     padding: 1px 1px 1px 1px;
     margin: 1px 1px 1px 1px;
@@ -170,5 +180,146 @@ hr{
 .middle-container{
     display: flex;
     justify-content: space-evenly;
+
     
 }
+
+dialog{
+    
+    width: 570px;
+    height: 570px;
+    border: #000000 solid 3px;
+    background-color: #1F2937;
+    border-radius: 5px;
+    align-items:self-start;
+    margin-bottom: 100px;
+}
+
+.form-content{
+    display: flex;
+    flex-direction: column;
+    
+    width: 570px;
+    height: 570px;
+    
+    align-items: center;
+    justify-content:flex-start;
+    
+
+    
+    
+    
+}
+.form-content p{
+
+    margin-top:10px;
+    font-family:'Inter', sans-serif;
+    font-size: 2em;
+    text-align: center;
+    
+}
+
+.tweaks-content{
+    display: flex;
+    width: 400px;
+    height: 340px;
+    
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+.tweaks-content label {
+    font-family: 'Inter';
+    color:white;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-right: 30px;
+
+    
+}
+.tweaks-content button{
+    background-color: #bcbcbc;
+}
+
+.txt-box{
+    
+       
+        width:120px;
+        height: 39px;
+        border-radius: 6px;
+        background-color: #273549;
+        margin-left: 10px;
+        text-align: center;
+        
+        
+       
+    
+}
+
+.checkbox-container {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+  }
+  
+  .custom-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+  
+  .custom-checkbox:checked ~ .checkmark {
+    background-color: #55F991;
+    box-shadow: 0 3px 7px rgba(33, 150, 243, 0.3);
+  }
+  
+  .custom-checkbox:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  @keyframes checkAnim {
+    0% {
+      height: 0;
+    }
+  
+    100% {
+      height: 10px;
+    }
+  }
+  
+  .custom-checkbox:checked ~ .checkmark:after {
+    animation: checkAnim 0.2s forwards;
+  }
+  
