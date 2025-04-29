@@ -1,6 +1,7 @@
 // Random character SET
 const characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~\\";
 const symbols = "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~\\"
+const nonSymbolChar = new Set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890")
 
 // copy button
 const copyButtonOne = document.getElementById("copy-btn-1")
@@ -72,13 +73,13 @@ function paswrdGenBtn() {
 // copy paswrd 1 to clipboard
 copyButtonOne.addEventListener('click', function () {
     navigator.clipboard.writeText(outputOne.value)
-    toast()
+    toast("Copied to clipbroad")
 })
 
 // copy paswrd 2 to clipboard
 copyButtonTwo.addEventListener('click', function () {
     navigator.clipboard.writeText(outputTwo.value)
-    toast()
+    toast("Copied to clipbroad")
 })
 /*
 // caller function to change title color on set interval
@@ -94,8 +95,9 @@ function changingTitleColor() {
 }
 */
 // function to display little toast when copied
-function toast() {
+function toast(message) {
     var x = document.getElementById("toast");
+    x.innerText = message
     x.className = "show";
     setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
 }
@@ -113,9 +115,16 @@ form.addEventListener('submit', function (event) {
 })
 
 // validate password value
-function validatePasswordLength(){
-    let passlen = document.forms["tweaks"]["passwordlen"].value
-    if(passlen < 8 || passlen > 20){
+function ValidatePasswordLength(){
+    const passlen = document.forms["tweaks"]["passwordlen"].value
+    const avoidCharSet = new Set(document.forms["tweaks"]["avoidchar"].value)
+    const commonSet = new Set([...avoidCharSet].filter(x => nonSymbolChar.has(x)))
+    if(passlen < 8 || passlen > 64){
+        toast("Password Length should be between 8 - 64")
+        return false
+    }
+    if(commonSet.size > 0){
+        toast("Avoid characters cannot contain Alphanumeric[a-zA-z0-9]")
         return false
     }
 }
