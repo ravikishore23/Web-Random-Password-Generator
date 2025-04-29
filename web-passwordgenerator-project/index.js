@@ -124,7 +124,7 @@ function ValidatePasswordLength(){
         return false
     }
     if(commonSet.size > 0){
-        toast("Avoid characters cannot contain Alphanumeric[a-zA-z0-9]")
+        toast("Avoid characters cannot contain Alphanumeric[a-zA-Z0-9]")
         return false
     }
 }
