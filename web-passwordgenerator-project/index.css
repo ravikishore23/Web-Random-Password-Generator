@@ -1,9 +1,10 @@
 :root {
-    display: flex;
+    display: grid;
     background-color:#1F2937;
     margin: 4rem;
     font-family:  Arial ,'Karla';
-    justify-content: center;
+
+    
 
 
 }
