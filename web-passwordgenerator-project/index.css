@@ -4,6 +4,7 @@
     margin: 4rem;
     font-family:  Arial ,'Karla';
     height: 500px;
+    margin: auto;
 
     
 
@@ -55,7 +56,9 @@ p {
 
 button{
     font-family: 'Inter', sans-serif;
-    color:white;
+    color:black;
+    font-weight: bold;
+    
     width: 191px;
     height: 42px;
     background-color:#4ADF86 ;
@@ -198,7 +201,7 @@ dialog{
     
     width: 570px;
     height: 570px;
-    border: #000000 solid 3px;
+    border:none;
     background-color: #1F2937;
     border-radius: 5px;
     align-items:self-start;
@@ -208,7 +211,9 @@ dialog{
 .form-content{
     display: flex;
     flex-direction: column;
-    
+
+    align-self: center;
+    vertical-align: middle;
     width: 570px;
     height: 570px;
     
@@ -261,11 +266,19 @@ dialog{
         background-color: #273549;
         margin-left: 10px;
         text-align: center;
+
+
         
         
        
     
 }
+.txt-box::-webkit-inner-spin-button,
+.txt-box::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 
 .checkbox-container {
   display: inline-block;
