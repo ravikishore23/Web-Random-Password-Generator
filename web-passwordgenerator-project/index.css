@@ -16,7 +16,6 @@ h1 {
 
 .container {
     border: none;
-    
     border-radius: 3px;
     display: flex;
     width: 600px;
@@ -24,11 +23,6 @@ h1 {
     align-items: center;
     justify-self: center;
     justify-content: space-evenly;
-
-   
-   
-   
-
 }
 
 .content-container {

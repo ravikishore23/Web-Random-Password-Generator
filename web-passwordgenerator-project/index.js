@@ -12,6 +12,9 @@ const form = document.querySelector('form');
 const tweaks = document.getElementById("tweaks-el")
 const dialog = document.getElementById("dialog")
 
+// password page
+const pswrdPage = document.getElementById("genPswrdPage")
+
 // assin  op 1 to 1st space  // op2 to 2nd space
 const outputOne = document.getElementById("output-1")
 const outputTwo = document.getElementById("output-2")
@@ -104,7 +107,8 @@ function toast(message) {
 
 // toggle pop up
 tweaks.addEventListener('click', (event) => {
-    dialog.showModal();
+    dialog.style.display= "flex";
+    pswrdPage.style.display= "none";
 })
 
 // on save get values
@@ -126,5 +130,9 @@ function ValidatePasswordLength(){
     if(commonSet.size > 0){
         toast("Avoid characters cannot contain Alphanumeric[a-zA-Z0-9]")
         return false
+    }
+    if((passlen > 7 || passlen < 65)&& commonSet.size == 0){
+        dialog.style.display= "none";
+        pswrdPage.style.display= "flex";
     }
 }
