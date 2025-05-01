@@ -1,95 +1,86 @@
 <!DOCTYPE html>
 <html lang="eng">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Random password generator</title>
-    <link rel="stylesheet" href="index.css" />
-    <link href="https://fonts.cdnfonts.com/css/karla" rel="stylesheet" />
-    <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet" />
-  </head>
 
-  <body>
-    <dialog id="dialog">
-      <form name="tweaks" onsubmit="return ValidatePasswordLength()">
-        <div class="form-content">
-          <p>Made a Tweak to your password parameters</p>
-          <hr />
-          <div class="tweaks-content">
-            <span>
-              <label for="passwordlen">Password length:</label>
-              <input
-                class="txt-box"
-                type="number"
-                name="passwordlen"
-                id="passwordlen"
-                min="8"
-                max="20"
-                value="15"
-              />
-            </span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Generate strong password for free online, easy password generator, ability to tweak password">
+    <meta name="robots" content="generate new password">
+  <title>Random password generator</title>
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.cdnfonts.com/css/karla" rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet" />
+</head>
 
-            <span>
-              <label for="avoidchar">Avoid characters:</label>
+<body>
+  <dialog id="dialog">
+    <form name="tweaks" onsubmit="return ValidatePasswordLength()">
+      <div class="form-content">
+        <p>Made a Tweak to your password parameters</p>
+        <hr />
+        <div class="tweaks-content">
+          <span>
+            <label for="passwordlen">Password length:</label>
+            <input class="txt-box" type="number" name="passwordlen" id="passwordlen" min="8" max="20" value="15" />
+          </span>
 
-              <input
-                class="txt-box"
-                type="text"
-                name="avoidchar"
-                id="avoidchar"
-              />
-            </span>
-            <span>
-              <label class="checkbox-container" for="avoidsym">
-                Avoid symbol
-                <input class="custom-checkbox" type="checkbox" id="avoidsym" />
-                <span class="checkmark"></span>
-              </label>
-            </span>
-          </div>
-          <button
-            type="submit"
-            aria-label="close"
-            formmethod="dialog"
-            formnovalidate
-          >
-            Save
-          </button>
+          <span>
+            <label for="avoidchar">Avoid characters:</label>
+
+            <input class="txt-box" type="text" name="avoidchar" id="avoidchar" />
+          </span>
+          <span>
+            <label class="checkbox-container" for="avoidsym">
+              Avoid symbol
+              <input class="custom-checkbox" type="checkbox" id="avoidsym" />
+              <span class="checkmark"></span>
+            </label>
+          </span>
         </div>
-      </form>
-    </dialog>
+        <button type="submit" aria-label="close" formmethod="dialog" formnovalidate>
+          Save
+        </button>
+      </div>
+    </form>
+  </dialog>
 
-    <div class="container">
-      <div class="content-container">
-        <div class="title-container">
+  <div class="container">
+    <div class="content-container">
+      <div class="title-container">
+        <h1>
           <p>Generate a</p>
           <p id="title">random password</p>
-          <p class="discription">Never use an insecure password again.</p>
+        </h1>
+
+        <p class="discription">Never use an insecure password again.</p>
+      </div>
+      <div class="middle-container">
+        <button onclick="paswrdGenBtn() ">Generate passwords</button>
+
+        <button id="tweaks-el">Tweaks</button>
+      </div>
+
+      <hr />
+      <div class="input-container">
+        <div class="input-box">
+          <button class="copy-btn" id="copy-btn-1" title="copy button">
+            copy
+          </button>
+          <input class="txt-box" id="output-1" type="text" maxlength="15" />
         </div>
-        <div class="middle-container">
-          <button onclick="paswrdGenBtn() ">Generate passwords</button>
 
-          <button id="tweaks-el">Tweaks</button>
-        </div>
-
-        <hr />
-        <div class="input-container">
-          <div class="input-box">
-            <button class="copy-btn" id="copy-btn-1" title="copy button">
-              copy
-            </button>
-            <input class="txt-box" id="output-1" type="text" maxlength="15" />
-          </div>
-
-          <div class="input-box">
-            <button class="copy-btn" id="copy-btn-2" title="copy button">
-              copy
-            </button>
-            <input class="txt-box" id="output-2" type="text" maxlength="15" />
-          </div>
+        <div class="input-box">
+          <button class="copy-btn" id="copy-btn-2" title="copy button">
+            copy
+          </button>
+          <input class="txt-box" id="output-2" type="text" maxlength="15" />
         </div>
       </div>
     </div>
-    <div id="toast">Copied to clipbroad</div>
-    <script src="index.js"></script>
-  </body>
+  </div>
+  <div id="toast">Copied to clipbroad</div>
+  <script src="index.js"></script>
+</body>
+
 </html>
