@@ -6,8 +6,7 @@
 }
 
 body {
-  margin-top: 6rem;
-    border: 1px solid white;
+    margin-top: 6rem;
     justify-self: center;
 }
 
@@ -24,7 +23,6 @@ h1 {
     align-items: center;
     justify-self: center;
     justify-content: space-evenly;
-    border: 1px solid white;
 
 }
 
