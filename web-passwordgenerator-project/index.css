@@ -3,12 +3,11 @@
     background-color:#1F2937;
     margin: 4rem;
     font-family:  Arial ,'Karla';
-    height: 500px;
-    margin: auto;
+}
 
-    
-
-
+body {
+    margin-top: 6rem;
+    justify-self: center;
 }
 
 h1 {
@@ -24,6 +23,7 @@ h1 {
     align-items: center;
     justify-self: center;
     justify-content: space-evenly;
+
 }
 
 .content-container {
